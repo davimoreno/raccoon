@@ -76,6 +76,7 @@ static inline int64_t mont64_csub(int64_t x, int64_t m)
     return r;
 }
 
+#ifndef POLYR_Q32
 //  Montgomery reduction. Returns r in [-q,q-1] so that r == (x/2^64) mod q.
 
 static inline int64_t mont64_redc(__int128 x)
@@ -121,6 +122,9 @@ static inline int64_t mont64_mulqa(int64_t x, int64_t y, int64_t z)
 
     return r;
 }
+
+//  POLYR_Q32
+#endif
 
 //  _MONT64_H_
 #endif
