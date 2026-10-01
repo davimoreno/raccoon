@@ -243,7 +243,7 @@ static bool racc_check_bounds(  const int64_t h[RACC_K][RACC_N],
     }
 
     //  --- 3:  if ||h||oo > round(Boo/2^nuw) return FAIL
-    if (hoo > ((RACC_BOO + (1l << (RACC_NUW - 1))) >> RACC_NUW))
+    if (hoo > ((RACC_BOO + (1ll << (RACC_NUW - 1))) >> RACC_NUW))
         return false;
 
     //  --- 4.  if ||z||oo > Boo return FAIL

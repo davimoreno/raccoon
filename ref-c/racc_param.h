@@ -52,7 +52,7 @@
 #define RACC_ZLBITS 40
 
 //  scaled inifinity norm for hint
-#define RACC_BOO_H  ((RACC_BOO + (1l << (RACC_NUW - 1))) >> RACC_NUW)
+#define RACC_BOO_H  ((RACC_BOO + (1ll << (RACC_NUW - 1))) >> RACC_NUW)
 
 //  _RACC_PARAM_H_
 #endif
